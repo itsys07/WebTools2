@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>文字列頻出単語検出</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <div class="section">
+    <h2>単語検出したい文章を入力</h2>
+    <textarea id="input" placeholder="ctrl+vで貼り付け、またはtextファイルをドラッグandドロップ"></textarea>
+    <button id="clearBtn">クリア</button>
+    <div>
+      <p>抽出対象</p>
+      <select id="mode">
+        <option value="words">単語</option>
+        <option value="numbers">数字のみ</option>
+        <option value="hiragana">ひらがな</option>
+        <option value="segmenter">高度な解析 (Intl.Segmenter)</option>
+      </select>
+
+      <select id="granularity">
+        <option value="word">単語単位</option>
+        <option value="sentence">文章単位</option>
+      </select>
+    </div>
+
+  </div>
+  <div class="section">
+    <h2>除外したい文字列</h2>
+    <!--<input id="exclude" type="search" placeholder="助詞、接続詞や冠名詞を,カンマ区切りで複数記入できます。">-->
+    <div class="tag-container">
+      <input id="exclude" type="search" placeholder="タグを入力">
+      <button id="addBtn">追加</button>
+      <div id="tagDisplay"></div>
+      <div id="message"></div>
+    </div>
+  </div>
+  <button onclick="analyze()">解析実行</button>
+  </div>
+  <div class="section">
+    <h2>検出結果（上位20件）クリックで除外対象にして再抽出</h2>
+
+    <div id="loading"></div>
+    <ul id="result"></ul>
+    <button id="downloadBtn">CSVダウンロード</button>
+  </div>
+  <div>
+    <button id="darkBtn">ライト/ダーク</button>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+:root {
+    color-scheme: light dark;
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --main-color: #4CAF50;
+}
+
+.dark-theme {
+    --bg-color: #1e1e1e;
+    --text-color: #ccc;
+    --main-color: #255226;
+    transition: .5s;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+input, select, button {
+    padding: 8px 12px;
+    margin: 6px 0;
+}
+
+body {
+    font-family: sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color .5s, color .5s;
+}
+
+.section {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 16px;
+    border-bottom: 2px solid var(--main-color);
+    padding-bottom: 5px;
+}
+
+textarea {
+    background-color: var(--bg-color);
+    width: 98%;
+    height: 100px;
+    padding: 5px;
+    color: var(--text-color);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: .5s;
+}
+
+input[type="search"] {
+    width: 98%;
+    height: 30px;
+    padding: 5px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: .5s;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid var(--main-color);
+}
+
+.tag-container {
+    padding: 20px;
+}
+
+#tagDisplay {
+    margin-top: 10px; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+ }
+
+.tag-item {
+    background-color: var(--main-color);
+    color: var(--text-color)e;
+    padding: 4px 10px;
+    border-radius: 16px;
+    display: inline-block;
+    margin: 4px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.tag-item.flash {
+  background: #ffdcdc;
+}
+
+.remove-tag {
+    margin-left: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button {
+    background: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #1a3b1c;
+}
+
+#clearBtn ,#addBtn {
+    width: 30%;
+}
+
+#darkBtn {
+    background: #06015f;
+    color: #ccc;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto;
+    font-weight: bold;
+}
+
+#darkBtn:hover {
+    background: #050038;
+}
+
+.dragover {
+    background-color: #ccc;
+    color: var(--text-color);
+}
+
+#downloadBtn:disabled {
+    background: gray;
+    color: var(--text-color);
+}
+
+#mode{
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    cursor: pointer;
+}
+
+#modde:hover {
+  border-color: #888;
+}
+
+.blink {
+    animation: blink 1s linear infinite;
+    color: var(--text-color);
+    transition: color 1s;
+}
+
+@keyframes blink {
+    0% {
+    opacity: 1;
+    }
+
+    50% {
+    opacity: 0;
+    }
+
+    100% {
+    opacity: 1;
+    }
+}
