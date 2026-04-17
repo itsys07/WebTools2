@@ -49,3 +49,5 @@ AIを使うほどではない軽い分析用途を想定しています。
 
 ## URL
 - https://itsys07.github.io/WebTools2/
+
+- <img width="718" height="886" alt="Image" src="https://github.com/user-attachments/assets/e6fa5ac3-edcc-4683-95d4-7d47fc402dd2" />
