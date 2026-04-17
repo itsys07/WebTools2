@@ -47,3 +47,5 @@ AIを使うほどではない軽い分析用途を想定しています。
 - Blob + BOMでCSV出力対応
 - CSVインジェクション対策（先頭文字エスケープ）
 
+## URL
+- https://itsys07.github.io/WebTools2/
